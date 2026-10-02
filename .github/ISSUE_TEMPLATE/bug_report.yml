@@ -1,0 +1,94 @@
+name: 🐞 Reporte de bug
+description: Algo no funciona como debería
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar. Entre más detalle des, más rápido podremos corregirlo.
+        ⚠️ **No pegues contraseñas, tokens ni datos personales.** Si es una vulnerabilidad de seguridad, **no uses este formulario**: usa *Security → Report a vulnerability*.
+
+  - type: checkboxes
+    id: prechecks
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Busqué en los issues existentes y no encontré uno igual
+          required: true
+        - label: Verifiqué que uso la última versión
+          required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ¿Qué pasó?
+      description: Describe el problema con claridad.
+      placeholder: "Al hacer clic en 'Guardar' aparece un error 500."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      value: |
+        1. Ir a '...'
+        2. Hacer clic en '...'
+        3. Ver el error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+      description: ¿Qué esperabas que sucediera?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamiento actual
+      description: ¿Qué sucede realmente? Incluye mensajes de error.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidad
+      options:
+        - Baja (molestia menor)
+        - Media (hay alternativa)
+        - Alta (bloquea una función importante)
+        - Crítica (caída total o pérdida de datos)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versión del proyecto
+      placeholder: "v1.2.3 o hash del commit"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno
+      value: |
+        - SO: (ej. Windows 11, macOS 15, Ubuntu 24.04)
+        - Navegador: (si aplica)
+        - Node.js / Python: (ej. Node 22, Python 3.12)
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs o capturas
+      description: Pega los logs relevantes (sin datos sensibles) o arrastra capturas.
+      render: shell
+    validations:
+      required: false

@@ -1,0 +1,83 @@
+name: ✨ Solicitud de funcionalidad
+description: Propón una mejora o una funcionalidad nueva
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tu idea. Cuéntanos primero **el problema** y después **la solución**; así podemos evaluar mejor la propuesta.
+
+  - type: checkboxes
+    id: prechecks
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Busqué en los issues existentes y no encontré una propuesta igual
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Qué problema o necesidad quieres resolver?
+      description: Describe la situación actual y por qué es un problema.
+      placeholder: "Cuando necesito exportar mis datos tengo que hacerlo a mano, uno por uno."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solución propuesta
+      description: ¿Cómo te imaginas que funcionaría?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: Otras formas de resolverlo, o cómo lo resuelves hoy.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: ¿Cómo sabremos que está terminado?
+      value: |
+        - [ ] Dado ..., cuando ..., entonces ...
+        - [ ] Dado ..., cuando ..., entonces ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad sugerida
+      options:
+        - Baja (agradable de tener)
+        - Media (mejora importante)
+        - Alta (necesaria para el siguiente release)
+    validations:
+      required: false
+
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: ¿Te gustaría implementarlo?
+      options:
+        - "Sí, puedo hacer el PR"
+        - "Sí, con ayuda"
+        - "No, solo propongo la idea"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional
+      description: Capturas, mockups, enlaces o ejemplos de otras herramientas.
+    validations:
+      required: false

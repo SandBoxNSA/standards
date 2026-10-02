@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔐 Reportar una vulnerabilidad de seguridad
+    url: https://github.com/<tu-org>/<repo>/security/advisories/new
+    about: No abras un issue público. Usa este canal privado.
+  - name: 💬 Preguntas y discusiones
+    url: https://github.com/<tu-org>/<repo>/discussions
+    about: Para dudas generales o ideas aún sin definir.
